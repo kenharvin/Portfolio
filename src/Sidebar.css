@@ -1,0 +1,191 @@
+.sidebar-container {
+  width: 280px;
+  height: 100%;
+  background: #0a0e27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sidebar-nav-list {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+/* ==========================
+   ITEM BASE
+========================== */
+
+.carousel-item {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    scale 0.35s ease;
+}
+/* ==========================
+   SELECTED ITEM
+========================== */
+
+.selection-box {
+  position: absolute;
+  top: 90px;
+  left: 0;
+
+  width: 100%;
+  height: 72px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(59, 130, 246, 0.08)
+  );
+
+  box-shadow:
+    0 20px 64px rgba(59, 130, 246, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.no-transition .carousel-item {
+  transition: none !important;
+}
+
+/* ==========================
+   TOP ITEM
+========================== */
+
+.top {
+  top: 0;
+
+  opacity: 0.3;
+
+  padding: 0.875rem 1rem;
+
+  transform: scale(0.85);
+}
+
+.top .icon {
+  font-size: 1.25rem;
+}
+
+.top .label {
+  color: #a1aec8;
+  font-size: 0.8125rem;
+}
+
+/* ==========================
+   CENTER ITEM
+========================== */
+
+.center {
+  top: 90px;
+
+  opacity: 1;
+
+  padding: 1.25rem 1.125rem;
+
+  transform: scale(1);
+}
+
+.center .icon {
+  font-size: 1.875rem;
+}
+
+.center .label {
+  color: #e8eef7;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+/* ==========================
+   BOTTOM ITEM
+========================== */
+
+.bottom {
+  top: 190px;
+
+  opacity: 0.3;
+
+  padding: 0.875rem 1rem;
+
+  transform: scale(0.85);
+}
+
+.bottom .icon {
+  font-size: 1.25rem;
+}
+
+.bottom .label {
+  color: #a1aec8;
+  font-size: 0.8125rem;
+}
+
+/* ==========================
+   SCROLL DOWN
+========================== */
+
+.sidebar-nav-list.down .top {
+  transform:
+    translateY(90px)
+    scale(1);
+
+  opacity: 1;
+}
+
+.sidebar-nav-list.down .center {
+  transform:
+    translateY(100px)
+    scale(0.85);
+
+  opacity: 0.3;
+}
+
+.sidebar-nav-list.down .bottom {
+  transform:
+    translateY(180px)
+    scale(0.6);
+
+  opacity: 0;
+}
+
+/* ==========================
+   SCROLL UP
+========================== */
+
+.sidebar-nav-list.up .bottom {
+  transform:
+    translateY(-100px)
+    scale(1);
+
+  opacity: 1;
+}
+
+.sidebar-nav-list.up .center {
+  transform:
+    translateY(-90px)
+    scale(0.85);
+
+  opacity: 0.3;
+}
+
+.sidebar-nav-list.up .top {
+  transform:
+    translateY(-180px)
+    scale(0.6);
+
+  opacity: 0;
+}
