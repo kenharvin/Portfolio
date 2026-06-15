@@ -4,15 +4,17 @@ import './Sidebar.css';
 const NAV_ITEMS = [
   { id: 1, icon: '🏠', label: 'Home' },
   { id: 2, icon: '👋', label: 'About' },
-  { id: 3, icon: '🚀', label: 'Projects' },
-  { id: 4, icon: '📧', label: 'Contact' },
+  { id: 3, icon: '🚀', label: 'Education' },
+  { id: 4, icon: '📧', label: 'Projects' },
   { id: 5, icon: '⚡', label: 'Skills' },
-  { id: 6, icon: '🎮', label: 'Fun Fact' },
-  { id: 7, icon: '💼', label: 'Experience' },
+  { id: 6, icon: '🎮', label: 'Experience' },
+  { id: 7, icon: '💼', label: 'Seminars and Trainings' },
+  { id: 7, icon: '💼', label: 'Contact' },
+  { id: 7, icon: '💼', label: 'Fun Fact' },
 ];
 
 export default function Sidebar({ onSelectIndex }) {
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const [direction, setDirection] = useState('');
   const [isAnimating, setIsAnimating] = useState(false);
   const [noTransition, setNoTransition] = useState(false);
