@@ -4,9 +4,9 @@ export default function ContactSection() {
 
       {/* Header */}
 
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 animate-fade-in">
 
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-400/20 text-green-300 mb-5">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/15 border border-green-400/30 text-green-300 mb-5 text-sm font-medium">
           🟢 Open to Opportunities
         </span>
 
@@ -23,7 +23,7 @@ export default function ContactSection() {
 
       {/* Contact Card */}
 
-      <div className="glass-card p-10">
+      <div className="glass-card p-10 animate-fade-in-up">
 
         <div className="grid lg:grid-cols-2 gap-10">
 
@@ -39,7 +39,7 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl">
+                <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110">
                   📧
                 </div>
 
@@ -62,7 +62,7 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-xl bg-cyan-500/20 flex items-center justify-center text-2xl">
+                <div className="w-14 h-14 rounded-xl bg-cyan-500/20 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110">
                   💻
                 </div>
 
@@ -87,7 +87,7 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl">
+                <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110">
                   📍
                 </div>
 

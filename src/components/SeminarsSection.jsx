@@ -31,7 +31,7 @@ export default function SeminarsSection() {
 
       {/* Header */}
 
-      <div className="mb-10">
+      <div className="mb-12 animate-fade-in">
 
         <h1 className="gradient-text text-5xl font-bold mb-3">
           Seminars & Training
@@ -46,20 +46,20 @@ export default function SeminarsSection() {
 
       {/* Seminar Cards */}
 
-      <div className="grid lg:grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-3 gap-6 animate-fade-in-up">
 
         {seminars.map((seminar) => (
 
           <div
             key={seminar.title}
-            className="glass-card hover:-translate-y-2 transition-all duration-300 group"
+            className="glass-card hover:shadow-glow hover:scale-105 transition-all duration-300 group"
           >
 
-            <div className="text-6xl mb-6 group-hover:scale-110 transition">
+            <div className="text-6xl mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300">
               {seminar.icon}
             </div>
 
-            <span className="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm mb-4 font-medium">
               {seminar.year}
             </span>
 
@@ -83,7 +83,7 @@ export default function SeminarsSection() {
 
       {/* Bottom Stats */}
 
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+      <div className="grid md:grid-cols-3 gap-6 mt-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
 
         <div className="glass-card text-center">
 

@@ -4,7 +4,7 @@ export default function EducationSection() {
 
       {/* Header */}
 
-      <div className="mb-10">
+      <div className="mb-12 animate-fade-in">
         <h1 className="gradient-text text-5xl font-bold mb-3">
           Education
         </h1>
@@ -18,7 +18,7 @@ export default function EducationSection() {
 
         {/* Timeline */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-left">
 
           <h2 className="text-2xl font-bold text-blue-300 mb-8">
             🎓 Academic Journey
@@ -32,9 +32,9 @@ export default function EducationSection() {
 
               <div className="flex flex-col items-center">
 
-                <div className="w-5 h-5 rounded-full bg-blue-500"></div>
+                <div className="w-5 h-5 rounded-full bg-blue-500 shadow-glow-sm"></div>
 
-                <div className="w-1 flex-1 bg-blue-500/30 mt-2"></div>
+                <div className="w-1 flex-1 bg-gradient-to-b from-blue-500/50 to-transparent mt-2"></div>
 
               </div>
 
@@ -68,9 +68,9 @@ export default function EducationSection() {
 
               <div className="flex flex-col items-center">
 
-                <div className="w-5 h-5 rounded-full bg-cyan-500"></div>
+                <div className="w-5 h-5 rounded-full bg-cyan-500 shadow-glow-sm"></div>
 
-                <div className="w-1 flex-1 bg-cyan-500/30 mt-2"></div>
+                <div className="w-1 flex-1 bg-gradient-to-b from-cyan-500/50 to-transparent mt-2"></div>
 
               </div>
 
@@ -98,7 +98,7 @@ export default function EducationSection() {
 
               <div className="flex flex-col items-center">
 
-                <div className="w-5 h-5 rounded-full bg-blue-300"></div>
+                <div className="w-5 h-5 rounded-full bg-blue-300 shadow-glow-sm"></div>
 
               </div>
 
@@ -126,7 +126,7 @@ export default function EducationSection() {
 
         {/* Side Cards */}
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 animate-fade-in-right">
 
           <div className="glass-card text-center">
 

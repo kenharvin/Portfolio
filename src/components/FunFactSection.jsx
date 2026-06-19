@@ -4,7 +4,7 @@ export default function FunFactSection() {
 
       {/* Header */}
 
-      <div className="text-center mb-10">
+      <div className="text-center mb-12 animate-fade-in">
 
         <h1 className="gradient-text text-5xl font-bold mb-3">
           Beyond Coding
@@ -19,11 +19,11 @@ export default function FunFactSection() {
 
       {/* Top Cards */}
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up">
 
-        <div className="glass-card text-center hover:-translate-y-2 transition-all duration-300">
+        <div className="glass-card text-center hover:shadow-glow hover:scale-105 transition-all duration-300 group">
 
-          <div className="text-6xl mb-5">
+          <div className="text-6xl mb-5 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300">
             💻
           </div>
 
@@ -38,9 +38,9 @@ export default function FunFactSection() {
 
         </div>
 
-        <div className="glass-card text-center hover:-translate-y-2 transition-all duration-300">
+        <div className="glass-card text-center hover:shadow-glow hover:scale-105 transition-all duration-300 group" style={{animationDelay: '0.1s'}}>
 
-          <div className="text-6xl mb-5">
+          <div className="text-6xl mb-5 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300">
             🎮
           </div>
 
@@ -55,9 +55,9 @@ export default function FunFactSection() {
 
         </div>
 
-        <div className="glass-card text-center hover:-translate-y-2 transition-all duration-300">
+        <div className="glass-card text-center hover:shadow-glow hover:scale-105 transition-all duration-300 group" style={{animationDelay: '0.2s'}}>
 
-          <div className="text-6xl mb-5">
+          <div className="text-6xl mb-5 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300">
             📚
           </div>
 
@@ -76,7 +76,7 @@ export default function FunFactSection() {
 
       {/* Quote */}
 
-      <div className="glass-card mt-8 p-10 text-center">
+      <div className="glass-card mt-12 p-10 text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
 
         <div className="text-5xl mb-4">
           💡
@@ -91,7 +91,7 @@ export default function FunFactSection() {
 
       {/* Interests */}
 
-      <div className="grid md:grid-cols-4 gap-5 mt-8">
+      <div className="grid md:grid-cols-4 gap-5 mt-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
 
         {[
           {

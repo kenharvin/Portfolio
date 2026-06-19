@@ -4,7 +4,7 @@ export default function AboutSection() {
 
       {/* Header */}
 
-      <div className="mb-10">
+      <div className="mb-12 animate-fade-in">
         <h1 className="gradient-text text-5xl font-bold mb-3">
           About Me
         </h1>
@@ -20,7 +20,7 @@ export default function AboutSection() {
 
         {/* Left Side */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-left">
 
           <h2 className="text-2xl font-bold text-blue-300 mb-6">
             👨‍💻 Who I Am
@@ -48,7 +48,7 @@ export default function AboutSection() {
 
         {/* Right Side */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-right">
 
           <h2 className="text-2xl font-bold text-cyan-300 mb-8">
             🚀 My Journey
@@ -60,9 +60,9 @@ export default function AboutSection() {
 
               <div className="flex flex-col items-center">
 
-                <div className="w-4 h-4 rounded-full bg-blue-400"></div>
+                <div className="w-4 h-4 rounded-full bg-blue-400 shadow-glow-sm"></div>
 
-                <div className="w-1 h-20 bg-blue-400/30 mt-2"></div>
+                <div className="w-1 h-20 bg-gradient-to-b from-blue-400/50 to-transparent mt-2"></div>
 
               </div>
 
@@ -85,9 +85,9 @@ export default function AboutSection() {
 
               <div className="flex flex-col items-center">
 
-                <div className="w-4 h-4 rounded-full bg-cyan-400"></div>
+                <div className="w-4 h-4 rounded-full bg-cyan-400 shadow-glow-sm"></div>
 
-                <div className="w-1 h-20 bg-cyan-400/30 mt-2"></div>
+                <div className="w-1 h-20 bg-gradient-to-b from-cyan-400/50 to-transparent mt-2"></div>
 
               </div>
 
@@ -110,7 +110,7 @@ export default function AboutSection() {
 
               <div className="flex flex-col items-center">
 
-                <div className="w-4 h-4 rounded-full bg-blue-300"></div>
+                <div className="w-4 h-4 rounded-full bg-blue-300 shadow-glow-sm"></div>
 
               </div>
 
@@ -139,7 +139,7 @@ export default function AboutSection() {
 
       <div className="grid md:grid-cols-3 gap-6 mt-8">
 
-        <div className="glass-card text-center">
+        <div className="glass-card text-center animate-fade-in-up transition-all duration-300">
 
           <div className="text-4xl mb-3">
             💡
@@ -155,7 +155,7 @@ export default function AboutSection() {
 
         </div>
 
-        <div className="glass-card text-center">
+        <div className="glass-card text-center animate-fade-in-up transition-all duration-300" style={{animationDelay: '0.1s'}}>
 
           <div className="text-4xl mb-3">
             📚
@@ -171,7 +171,7 @@ export default function AboutSection() {
 
         </div>
 
-        <div className="glass-card text-center">
+        <div className="glass-card text-center animate-fade-in-up transition-all duration-300" style={{animationDelay: '0.2s'}}>
 
           <div className="text-4xl mb-3">
             🤝

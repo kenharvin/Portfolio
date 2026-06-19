@@ -4,7 +4,7 @@ export default function ProjectsSection() {
 
       {/* Header */}
 
-      <div className="mb-10">
+      <div className="mb-12 animate-fade-in">
 
         <h1 className="gradient-text text-5xl font-bold mb-3">
           Projects
@@ -19,44 +19,46 @@ export default function ProjectsSection() {
 
       {/* Featured Project */}
 
-      <div className="glass-card mb-8 p-8">
+      <div className="glass-card mb-8 p-8 animate-fade-in-up transition-all duration-300 hover:shadow-glow">
 
         <div className="flex flex-col lg:flex-row justify-between gap-8">
 
-          <div className="flex-1">
+          <div className="flex-1 space-y-6">
 
-            <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium">
               ⭐ Featured Project
             </span>
 
-            <h2 className="text-4xl font-bold text-white mt-5 mb-4">
-              Progresstify
-            </h2>
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">
+                Progresstify
+              </h2>
 
-            <p className="text-slate-300 leading-8 mb-6">
-              A web-based project management application developed using
-              React and Node.js. The system helps users organize tasks,
-              manage projects, and improve productivity through an intuitive
-              and responsive interface.
-            </p>
+              <p className="text-slate-300 leading-8">
+                A web-based project management application developed using
+                React and Node.js. The system helps users organize tasks,
+                manage projects, and improve productivity through an intuitive
+                and responsive interface.
+              </p>
+            </div>
 
             {/* Tech Stack */}
 
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3">
 
-              <span className="px-4 py-2 rounded-full bg-blue-500/10 text-blue-300">
+              <span className="tag">
                 React
               </span>
 
-              <span className="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-300">
+              <span className="tag">
                 Node.js
               </span>
 
-              <span className="px-4 py-2 rounded-full bg-white/10">
+              <span className="tag">
                 JavaScript
               </span>
 
-              <span className="px-4 py-2 rounded-full bg-white/10">
+              <span className="tag">
                 Responsive UI
               </span>
 
@@ -64,13 +66,13 @@ export default function ProjectsSection() {
 
             {/* Buttons */}
 
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap pt-4">
 
               <a
                 href="https://progresstify.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 font-semibold hover:scale-105 transition"
+                className="btn-primary"
               >
                 🚀 Live Demo
               </a>
@@ -79,7 +81,7 @@ export default function ProjectsSection() {
                 href="https://github.com/kenharvin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-xl border border-slate-500 hover:border-blue-400 transition"
+                className="btn-outline"
               >
                 💻 GitHub
               </a>
@@ -90,9 +92,9 @@ export default function ProjectsSection() {
 
           {/* Right Side */}
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center lg:justify-end">
 
-            <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-500/20 flex flex-col items-center justify-center">
+            <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-500/20 flex flex-col items-center justify-center shadow-glow hover:shadow-glow-lg transition-all duration-300">
 
               <div className="text-7xl mb-4">
                 📋

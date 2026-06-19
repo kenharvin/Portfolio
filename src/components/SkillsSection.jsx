@@ -4,7 +4,7 @@ export default function SkillsSection() {
 
       {/* Header */}
 
-      <div className="mb-10">
+      <div className="mb-12 animate-fade-in">
 
         <h1 className="gradient-text text-5xl font-bold mb-3">
           Skills & Expertise
@@ -20,7 +20,7 @@ export default function SkillsSection() {
 
         {/* Frontend */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-left">
 
           <h2 className="text-2xl font-bold text-blue-300 mb-8">
             💻 Frontend Development
@@ -40,9 +40,9 @@ export default function SkillsSection() {
                   <span className="text-slate-400">{width}</span>
                 </div>
 
-                <div className="h-2 rounded-full bg-slate-700 overflow-hidden">
+                <div className="h-3 rounded-full bg-slate-700/50 overflow-hidden shadow-inner">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                    className="h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 shadow-glow-sm transition-all duration-300"
                     style={{ width }}
                   />
                 </div>
@@ -55,7 +55,7 @@ export default function SkillsSection() {
 
         {/* Backend */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-right">
 
           <h2 className="text-2xl font-bold text-cyan-300 mb-8">
             ⚙️ Backend Development
@@ -75,9 +75,9 @@ export default function SkillsSection() {
                   <span className="text-slate-400">{width}</span>
                 </div>
 
-                <div className="h-2 rounded-full bg-slate-700 overflow-hidden">
+                <div className="h-3 rounded-full bg-slate-700/50 overflow-hidden shadow-inner">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
+                    className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 shadow-glow-sm transition-all duration-300"
                     style={{ width }}
                   />
                 </div>
@@ -96,7 +96,7 @@ export default function SkillsSection() {
 
         {/* Tech Stack */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-up">
 
           <h2 className="text-2xl font-bold text-white mb-6">
             🚀 Tech Stack
@@ -120,7 +120,7 @@ export default function SkillsSection() {
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-full bg-white/10 hover:bg-blue-500/20 transition cursor-default"
+                className="tag"
               >
                 {tech}
               </span>
@@ -132,7 +132,7 @@ export default function SkillsSection() {
 
         {/* Summary */}
 
-        <div className="glass-card">
+        <div className="glass-card animate-fade-in-up" style={{animationDelay: '0.1s'}}>
 
           <h2 className="text-2xl font-bold text-white mb-6">
             📊 Overview

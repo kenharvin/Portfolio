@@ -1,11 +1,21 @@
 .sidebar-container {
   width: 280px;
   height: 100%;
-  background: #0a0e27;
+  background: linear-gradient(180deg, #0a0e27 0%, #0f172a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.sidebar-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.08), transparent 50%);
+  pointer-events: none;
 }
 
 .sidebar-nav-list {
@@ -26,38 +36,42 @@
 
   display: flex;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 
   transition:
-    transform 0.35s ease,
-    opacity 0.35s ease,
-    scale 0.35s ease;
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    scale 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* ==========================
-   SELECTED ITEM
+   SELECTED ITEM - HIGHLIGHT BOX
 ========================== */
 
 .selection-box {
   position: absolute;
   top: 90px;
-  left: 0;
+  left: 12px;
 
-  width: 100%;
+  width: calc(100% - 24px);
   height: 72px;
 
-  border-radius: 14px;
+  border-radius: 18px;
 
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.15),
-    rgba(59, 130, 246, 0.08)
-  );
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
 
-  box-shadow:
-    0 20px 64px rgba(59, 130, 246, 0.3),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 64px rgba(59, 130, 246, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  border: 1px solid rgba(59, 130, 246, 0.4);
 
   pointer-events: none;
   z-index: 0;
+
+  backdrop-filter: blur(12px);
+
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .no-transition .carousel-item {
@@ -65,30 +79,33 @@
 }
 
 /* ==========================
-   TOP ITEM
+   TOP ITEM (PREVIOUS)
 ========================== */
 
 .top {
   top: 0;
 
-  opacity: 0.3;
+  opacity: 0.35;
 
-  padding: 0.875rem 1rem;
+  padding: 0.875rem 1.25rem;
 
-  transform: scale(0.85);
+  transform: scale(0.9);
 }
 
 .top .icon {
   font-size: 1.25rem;
+  filter: grayscale(40%);
 }
 
 .top .label {
-  color: #a1aec8;
+  color: #94a3b8;
   font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 /* ==========================
-   CENTER ITEM
+   CENTER ITEM (CURRENT)
 ========================== */
 
 .center {
@@ -96,46 +113,52 @@
 
   opacity: 1;
 
-  padding: 1.25rem 1.125rem;
+  padding: 1.25rem 1.25rem;
 
   transform: scale(1);
 }
 
 .center .icon {
   font-size: 1.875rem;
+  animation: float 3s ease-in-out infinite;
 }
 
 .center .label {
   color: #e8eef7;
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
 }
 
 /* ==========================
-   BOTTOM ITEM
+   BOTTOM ITEM (NEXT)
 ========================== */
 
 .bottom {
   top: 190px;
 
-  opacity: 0.3;
+  opacity: 0.35;
 
-  padding: 0.875rem 1rem;
+  padding: 0.875rem 1.25rem;
 
-  transform: scale(0.85);
+  transform: scale(0.9);
 }
 
 .bottom .icon {
   font-size: 1.25rem;
+  filter: grayscale(40%);
 }
 
 .bottom .label {
-  color: #a1aec8;
+  color: #94a3b8;
   font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 /* ==========================
-   SCROLL DOWN
+   SCROLL DOWN (NEXT)
 ========================== */
 
 .sidebar-nav-list.down .top {
@@ -149,21 +172,21 @@
 .sidebar-nav-list.down .center {
   transform:
     translateY(100px)
-    scale(0.85);
+    scale(0.9);
 
-  opacity: 0.3;
+  opacity: 0.35;
 }
 
 .sidebar-nav-list.down .bottom {
   transform:
     translateY(180px)
-    scale(0.6);
+    scale(0.8);
 
   opacity: 0;
 }
 
 /* ==========================
-   SCROLL UP
+   SCROLL UP (PREVIOUS)
 ========================== */
 
 .sidebar-nav-list.up .bottom {
@@ -177,15 +200,28 @@
 .sidebar-nav-list.up .center {
   transform:
     translateY(-90px)
-    scale(0.85);
+    scale(0.9);
 
-  opacity: 0.3;
+  opacity: 0.35;
 }
 
 .sidebar-nav-list.up .top {
   transform:
     translateY(-180px)
-    scale(0.6);
+    scale(0.8);
 
   opacity: 0;
+}
+
+/* ==========================
+   ANIMATION KEYFRAMES
+========================== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
