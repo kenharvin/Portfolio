@@ -75,18 +75,28 @@ export default function ExperienceSection() {
 
               <div>
 
-                <span className="text-sm text-cyan-300">
+                <h3 className="text-sm text-cyan-300">
                   Major Project
-                </span>
-
-                <h3 className="text-2xl font-bold text-white mt-1">
-                  Progresstify Development
                 </h3>
+
+                <h5 className="text-2xl font-bold text-white mt-1">
+                  Progresstify
+                </h5>
 
                 <p className="text-slate-400 mt-3 leading-8">
                   Built a web-based project management system using React
                   and Node.js with emphasis on responsive UI design and
                   user experience.
+                </p>
+
+                <h5 className="text-2xl font-bold text-white mt-1">
+                  Multi-modal Fare and Route Estimation Application
+                </h5>
+
+                <p className="text-slate-400 mt-3 leading-8">
+                  Built a android application using React Native and FastAPI
+                  that can calculate fare and routes for various transportation 
+                  modes in the Metro Manila and nearby areas.
                 </p>
 
               </div>
@@ -107,13 +117,13 @@ export default function ExperienceSection() {
 
               <div>
 
-                <span className="text-sm text-blue-200">
+                <h3 className="text-sm text-blue-200">
                   Professional Development
-                </span>
-
-                <h3 className="text-2xl font-bold text-white mt-1">
-                  Bootcamps & Conferences
                 </h3>
+
+                <h5 className="text-2xl font-bold text-white mt-1">
+                  Bootcamps & Conferences
+                </h5>
 
                 <p className="text-slate-400 mt-3 leading-8">
                   Participated in coding bootcamps, career orientation
@@ -137,13 +147,13 @@ export default function ExperienceSection() {
 
               <div>
 
-                <span className="text-sm text-green-300">
+                <h3 className="text-sm text-green-300">
                   Next Goal
-                </span>
-
-                <h3 className="text-2xl font-bold text-white mt-1">
-                  Junior Full Stack Developer
                 </h3>
+
+                <h5 className="text-2xl font-bold text-white mt-1">
+                  Junior Full Stack Developer
+                </h5>
 
                 <p className="text-slate-400 mt-3 leading-8">
                   Looking forward to contributing to real-world software
@@ -170,11 +180,14 @@ export default function ExperienceSection() {
             </div>
 
             <h3 className="text-xl font-bold text-white mb-2">
-              Major Project
+              Major Project/s
             </h3>
 
             <p className="text-slate-400">
               Developed Progresstify using React and Node.js.
+            </p>
+            <p className="text-slate-400">
+              Built a multi-modal fare and route estimation application using React Native and FastAPI.
             </p>
 
           </div>

@@ -13,11 +13,20 @@ import SeminarsSection from "./components/SeminarsSection";
 import ContactSection from "./components/ContactSection";
 import FunFactSection from "./components/FunFactSection";
 
-const SECTIONS = [
+
+
+function App() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const SECTIONS = [
   {
     title: "Home",
     icon: "🏠",
-    component: <HomeSection />,
+    component: (
+        <HomeSection
+          goToProjects={() => setSelectedIndex(3)}
+        />
+      ),
   },
   {
     title: "About",
@@ -60,9 +69,6 @@ const SECTIONS = [
     component: <FunFactSection />,
   },
 ];
-
-function App() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
     <div className="app-wrapper">

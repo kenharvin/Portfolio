@@ -27,8 +27,8 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-slate-300 leading-8 mb-5">
-            I'm Ken Harvin Lacanienta, a Bachelor of Science in Information
-            Technology student from ACLC College of Taytay with a passion for
+            I'm Ken Harvin Lacanienta, a Bachelor of Science in Computer Science 
+            graduate from ACLC College of Taytay with a passion for
             creating modern and user-friendly web applications.
           </p>
 
@@ -73,7 +73,7 @@ export default function AboutSection() {
                 </h3>
 
                 <p className="text-slate-400">
-                  Started my BSIT journey at ACLC College of Taytay and began
+                  Started my BSCS journey at ACLC College of Taytay and began
                   exploring web development.
                 </p>
 

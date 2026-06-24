@@ -64,19 +64,48 @@ export default function ProjectsSection() {
 
             </div>
 
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">
+                Multi-Modal Fare and Route Estimation System
+              </h2>
+
+              <p className="text-slate-300 leading-8">
+                An Android-based travel planning application developed using React Native
+                and FastAPI. The system helps users estimate fares and identify suitable
+                routes across multiple transportation modes, including public and private
+                transport. It utilizes a hybrid of Greedy Algorithm and Fuzzy Logic for
+                public transportation routing, while Fuzzy Logic is used to estimate
+                private vehicle travel costs based on user preferences.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+
+              <span className="tag">
+                React Native
+              </span>
+
+              <span className="tag">
+                FastAPI
+              </span>
+
+              <span className="tag">
+                Python
+              </span>
+
+              <span className="tag">
+                PostgreSQL
+              </span>
+
+              <span className="tag">
+                REST API
+              </span>
+
+            </div>
+
             {/* Buttons */}
 
             <div className="flex gap-4 flex-wrap pt-4">
-
-              <a
-                href="https://progresstify.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                🚀 Live Demo
-              </a>
-
               <a
                 href="https://github.com/kenharvin"
                 target="_blank"
@@ -90,27 +119,7 @@ export default function ProjectsSection() {
 
           </div>
 
-          {/* Right Side */}
-
-          <div className="flex items-center justify-center lg:justify-end">
-
-            <div className="w-72 h-72 rounded-3xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-500/20 flex flex-col items-center justify-center shadow-glow hover:shadow-glow-lg transition-all duration-300">
-
-              <div className="text-7xl mb-4">
-                📋
-              </div>
-
-              <h3 className="text-2xl font-bold text-white">
-                Progresstify
-              </h3>
-
-              <p className="text-slate-400 mt-2">
-                Project Management System
-              </p>
-
-            </div>
-
-          </div>
+          
 
         </div>
 

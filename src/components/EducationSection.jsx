@@ -45,17 +45,15 @@ export default function EducationSection() {
                 </h3>
 
                 <p className="text-blue-300 mb-2">
-                  Bachelor of Science in Information Technology
+                  Bachelor of Science in Computer Science (BSCS)
                 </p>
 
                 <p className="text-slate-400">
-                  2022 – Present
+                  2022 – 2026
                 </p>
 
                 <p className="text-slate-500 mt-3 leading-7">
-                  Currently pursuing my degree while building web
-                  applications and strengthening my skills in frontend and
-                  backend development.
+                  Tertiary Education
                 </p>
 
               </div>
@@ -79,13 +77,13 @@ export default function EducationSection() {
                 <h3 className="text-xl font-semibold text-white">
                   Juan Sumulong Memorial Junior College
                 </h3>
-
+                  2014 – 2020
                 <p className="text-slate-400">
-                  Secondary Education
+                  
                 </p>
 
                 <p className="text-slate-500">
-                  2014 – 2020
+                  Secondary Education
                 </p>
 
               </div>
@@ -109,11 +107,11 @@ export default function EducationSection() {
                 </h3>
 
                 <p className="text-slate-400">
-                  Primary Education
+                  2008 – 2014
                 </p>
 
                 <p className="text-slate-500">
-                  2008 – 2014
+                  Primary Education
                 </p>
 
               </div>
@@ -135,11 +133,11 @@ export default function EducationSection() {
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-2">
-              BSIT Student
+              BSCS Student
             </h3>
 
             <p className="text-slate-400">
-              Currently pursuing Information Technology with a focus on
+              Currently pursuing Bachelor of Science in Computer Science with a focus on
               software and web development.
             </p>
 

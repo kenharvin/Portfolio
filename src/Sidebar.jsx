@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Sidebar.css';
 
 const NAV_ITEMS = [
-  { id: 1, icon: '🏠', label: 'Home' },
-  { id: 2, icon: '👋', label: 'About' },
-  { id: 3, icon: '🚀', label: 'Education' },
-  { id: 4, icon: '📧', label: 'Projects' },
-  { id: 5, icon: '⚡', label: 'Skills' },
-  { id: 6, icon: '🎮', label: 'Experience' },
-  { id: 7, icon: '💼', label: 'Seminars and Trainings' },
+  { id: 0, icon: '🏠', label: 'Home' },
+  { id: 1, icon: '👋', label: 'About' },
+  { id: 2, icon: '🚀', label: 'Education' },
+  { id: 3, icon: '📧', label: 'Projects' },
+  { id: 4, icon: '⚡', label: 'Skills' },
+  { id: 5, icon: '🎮', label: 'Experience' },
+  { id: 6, icon: '💼', label: 'Seminars and Trainings' },
   { id: 7, icon: '💼', label: 'Contact' },
-  { id: 7, icon: '💼', label: 'Fun Fact' },
+  { id: 8, icon: '💼', label: 'Fun Fact' },
 ];
 
 export default function Sidebar({ onSelectIndex }) {

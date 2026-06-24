@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 export default function ContactSection() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("kenlacanienta93@gmail.com");
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
   return (
     <div className="h-full flex flex-col justify-center">
 
@@ -39,19 +49,14 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110">
-                  📧
-                </div>
-
                 <div>
 
-                  <p className="text-slate-400 text-sm">
-                    Email
-                  </p>
+                  <h4 className="text-slate-400 text-sm">
+                    Email:
+                  </h4>
 
                   <a
-                    href="mailto:kenlacanienta93@gmail.com"
-                    className="text-lg text-white hover:text-blue-300 transition"
+                    className="text-lg text-white hover:text-white-300 transition"
                   >
                     kenlacanienta93@gmail.com
                   </a>
@@ -62,21 +67,15 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-xl bg-cyan-500/20 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110">
-                  💻
-                </div>
-
                 <div>
 
-                  <p className="text-slate-400 text-sm">
-                    GitHub
-                  </p>
+                  <h4 className="text-slate-400 text-sm">
+                    GitHub:
+                  </h4>
 
                   <a
-                    href="https://github.com/kenharvin"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg text-white hover:text-cyan-300 transition"
+                    
+                    className="text-lg !text-white hover:text-cyan-300 transition"
                   >
                     github.com/kenharvin
                   </a>
@@ -87,18 +86,14 @@ export default function ContactSection() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110">
-                  📍
-                </div>
-
                 <div>
 
-                  <p className="text-slate-400 text-sm">
-                    Location
-                  </p>
+                  <h4 className="text-slate-400 text-sm">
+                    Location:
+                  </h4>
 
                   <p className="text-lg text-white">
-                    Taytay, Rizal, Philippines
+                    Alfonso, Cavite, Philippines
                   </p>
 
                 </div>
@@ -127,20 +122,20 @@ export default function ContactSection() {
 
               <div className="flex flex-wrap gap-4">
 
-                <a
-                  href="mailto:kenlacanienta93@gmail.com"
-                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 font-semibold hover:scale-105 transition"
-                >
-                  📧 Email Me
-                </a>
+                <button
+                onClick={copyEmail}
+                className="btn-outline"
+              >
+                {emailCopied ? "✅ Copied!" : "📋 Copy Email"}
+              </button>
 
                 <a
                   href="https://github.com/kenharvin"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-xl border border-slate-500 hover:border-blue-400 transition"
+                  className="btn-outline"
                 >
-                  💻 View GitHub
+                  💻 GitHub
                 </a>
 
               </div>

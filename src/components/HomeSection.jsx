@@ -1,6 +1,6 @@
 import heroImg from "../assets/Ken.png";
 
-export default function HomeSection() {
+export default function HomeSection({ goToProjects }) {
   return (
     <div className="w-full min-h-full flex items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full max-w-7xl px-4">
@@ -60,14 +60,12 @@ export default function HomeSection() {
 
           <div className="flex flex-wrap gap-4 pt-2">
 
-            <a
-              href="https://progresstify.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
+            <button
+              onClick={goToProjects}
               className="btn-primary"
             >
-              View Project →
-            </a>
+              View Projects →
+            </button>
 
             <a
               href="mailto:kenlacanienta93@gmail.com"

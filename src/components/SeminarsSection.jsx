@@ -1,29 +1,27 @@
 export default function SeminarsSection() {
   const seminars = [
     {
-      icon: "📡",
-      title: "IoT Conference 2025",
-      location: "SMX Convention Center",
-      year: "2025",
-      description:
-        "Attended the Internet of Things Conference to explore emerging technologies, smart systems, and industry innovations.",
-    },
-    {
-      icon: "👨‍💻",
       title: "Live Remote Coding Bootcamp",
       location: "Entirety Technologies",
-      year: "2025",
+      year: "2019",
       description:
         "Participated in an intensive coding bootcamp focused on practical software development skills and industry best practices.",
     },
     {
-      icon: "🎯",
       title: "Career Orientation Program",
       location: "Professional Development",
       year: "2023",
       description:
         "Learned about career preparation, workplace expectations, communication, and opportunities in the IT industry.",
     },
+    {
+      title: "IoT Conference 2025",
+      location: "SMX Convention Center",
+      year: "2025",
+      description:
+        "Attended the Internet of Things Conference to explore emerging technologies, smart systems, and industry innovations.",
+    },
+    
   ];
 
   return (
@@ -54,10 +52,6 @@ export default function SeminarsSection() {
             key={seminar.title}
             className="glass-card hover:shadow-glow hover:scale-105 transition-all duration-300 group"
           >
-
-            <div className="text-6xl mb-6 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300">
-              {seminar.icon}
-            </div>
 
             <span className="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm mb-4 font-medium">
               {seminar.year}
