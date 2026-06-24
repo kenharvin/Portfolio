@@ -11,7 +11,7 @@ export default function SkillsSection() {
         </h1>
 
         <p className="text-slate-400 text-lg">
-          Technologies and tools that I use to build modern web applications.
+          Technologies, frameworks, and development tools I've used to build full-stack web and mobile applications.
         </p>
 
       </div>
@@ -30,9 +30,9 @@ export default function SkillsSection() {
 
             {[
               ["React", "90%"],
+              ["React Native", "85%"],
               ["JavaScript", "90%"],
-              ["HTML", "95%"],
-              ["CSS", "90%"],
+              ["HTML & CSS", "95%"],
             ].map(([skill, width]) => (
               <div key={skill}>
                 <div className="flex justify-between mb-2">
@@ -64,10 +64,10 @@ export default function SkillsSection() {
           <div className="space-y-6">
 
             {[
-              ["Node.js", "80%"],
-              ["PHP", "80%"],
-              ["Python", "75%"],
-              ["MySQL", "80%"],
+              ["Node.js", "85%"],
+              ["FastAPI", "80%"],
+              ["Python", "80%"],
+              ["MySQL / PostgreSQL", "85%"],
             ].map(([skill, width]) => (
               <div key={skill}>
                 <div className="flex justify-between mb-2">
@@ -106,16 +106,16 @@ export default function SkillsSection() {
 
             {[
               "React",
+              "React Native",
               "Node.js",
+              "FastAPI",
               "JavaScript",
-              "PHP",
               "Python",
-              "HTML",
-              "CSS",
-              "Tailwind",
+              "PHP",
+              "MySQL",
+              "PostgreSQL",
               "Git",
               "GitHub",
-              "MySQL",
               "Vite",
             ].map((tech) => (
               <span
@@ -143,7 +143,7 @@ export default function SkillsSection() {
             <div className="text-center p-4 rounded-xl bg-white/5">
 
               <h3 className="text-4xl font-bold gradient-text">
-                7+
+                10+
               </h3>
 
               <p className="text-slate-400">
@@ -155,7 +155,7 @@ export default function SkillsSection() {
             <div className="text-center p-4 rounded-xl bg-white/5">
 
               <h3 className="text-4xl font-bold gradient-text">
-                2+
+                2
               </h3>
 
               <p className="text-slate-400">

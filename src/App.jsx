@@ -25,6 +25,7 @@ function App() {
     component: (
         <HomeSection
           goToProjects={() => setSelectedIndex(3)}
+          goToContacts={() => setSelectedIndex(7)}
         />
       ),
   },
@@ -75,6 +76,7 @@ function App() {
       <div className="app-popup-container">
         <Sidebar
           items={SECTIONS}
+          selectedIndex={selectedIndex}
           onSelectIndex={setSelectedIndex}
         />
 

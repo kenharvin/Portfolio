@@ -1,6 +1,6 @@
 import heroImg from "../assets/Ken.png";
 
-export default function HomeSection({ goToProjects }) {
+export default function HomeSection({ goToProjects, goToContacts }) {
   return (
     <div className="w-full min-h-full flex items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full max-w-7xl px-4">
@@ -67,12 +67,12 @@ export default function HomeSection({ goToProjects }) {
               View Projects →
             </button>
 
-            <a
-              href="mailto:kenlacanienta93@gmail.com"
+            <button
+              onClick={goToContacts}
               className="btn-secondary"
             >
               Contact Me
-            </a>
+            </button>
 
           </div>
 
@@ -82,11 +82,11 @@ export default function HomeSection({ goToProjects }) {
 
             <div className="glass-card text-center py-4 transition-all duration-300 hover:bg-blue-500/10">
               <h3 className="text-2xl font-bold gradient-text">
-                1+
+                2
               </h3>
 
               <p className="text-slate-400 mt-1 text-xs font-medium">
-                Project
+                Project/s
               </p>
             </div>
 

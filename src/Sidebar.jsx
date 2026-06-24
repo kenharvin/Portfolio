@@ -1,20 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Sidebar.css';
 
-const NAV_ITEMS = [
-  { id: 0, icon: '🏠', label: 'Home' },
-  { id: 1, icon: '👋', label: 'About' },
-  { id: 2, icon: '🚀', label: 'Education' },
-  { id: 3, icon: '📧', label: 'Projects' },
-  { id: 4, icon: '⚡', label: 'Skills' },
-  { id: 5, icon: '🎮', label: 'Experience' },
-  { id: 6, icon: '💼', label: 'Seminars and Trainings' },
-  { id: 7, icon: '💼', label: 'Contact' },
-  { id: 8, icon: '💼', label: 'Fun Fact' },
-];
 
-export default function Sidebar({ onSelectIndex }) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+
+export default function Sidebar({ items, selectedIndex, onSelectIndex }) {
   const [direction, setDirection] = useState('');
   const [isAnimating, setIsAnimating] = useState(false);
   const [noTransition, setNoTransition] = useState(false);
@@ -35,10 +24,10 @@ export default function Sidebar({ onSelectIndex }) {
         // Disable transitions before swapping content
         setNoTransition(true);
 
-        setSelectedIndex((prev) =>
+        onSelectIndex?.((prev) =>
           isScrollDown
-            ? (prev + 1) % NAV_ITEMS.length
-            : (prev - 1 + NAV_ITEMS.length) % NAV_ITEMS.length
+            ? (prev + 1) % items.length
+            : (prev - 1 + items.length) % items.length
         );
 
         setDirection('');
@@ -62,16 +51,13 @@ export default function Sidebar({ onSelectIndex }) {
       sidebar?.removeEventListener('wheel', handleWheel);
   }, [isAnimating]);
 
-  useEffect(() => {
-    onSelectIndex?.(selectedIndex);
-  }, [selectedIndex, onSelectIndex]);
 
   const getPrevIndex = () =>
-    (selectedIndex - 1 + NAV_ITEMS.length) %
-    NAV_ITEMS.length;
+    (selectedIndex - 1 + items.length) %
+    items.length;
 
   const getNextIndex = () =>
-    (selectedIndex + 1) % NAV_ITEMS.length;
+    (selectedIndex + 1) % items.length;
 
   return (
   <aside
@@ -88,28 +74,28 @@ export default function Sidebar({ onSelectIndex }) {
 
       <div className="carousel-item top">
         <span className="icon">
-          {NAV_ITEMS[getPrevIndex()].icon}
+          {items[getPrevIndex()].icon}
         </span>
-        <span className="label">
-          {NAV_ITEMS[getPrevIndex()].label}
+        <span className="title">
+          {items[getPrevIndex()].title}
         </span>
       </div>
 
       <div className="carousel-item center">
         <span className="icon">
-          {NAV_ITEMS[selectedIndex].icon}
+          {items[selectedIndex].icon}
         </span>
-        <span className="label">
-          {NAV_ITEMS[selectedIndex].label}
+        <span className="title">
+          {items[selectedIndex].title}
         </span>
       </div>
 
       <div className="carousel-item bottom">
         <span className="icon">
-          {NAV_ITEMS[getNextIndex()].icon}
+          {items[getNextIndex()].icon}
         </span>
-        <span className="label">
-          {NAV_ITEMS[getNextIndex()].label}
+        <span className="title">
+          {items[getNextIndex()].title}
         </span>
       </div>
     </div>
