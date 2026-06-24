@@ -74,7 +74,7 @@ export default function ProjectsSection() {
                 and FastAPI. The system helps users estimate fares and identify suitable
                 routes across multiple transportation modes, including public and private
                 transport. It utilizes a hybrid of Greedy Algorithm and Fuzzy Logic for
-                public transportation routing, while Fuzzy Logic is used to estimate
+                public transportation routing, while Greedy algorithm is used to estimate
                 private vehicle travel costs based on user preferences.
               </p>
             </div>
