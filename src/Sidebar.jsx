@@ -60,43 +60,49 @@ export default function Sidebar({ items, selectedIndex, onSelectIndex }) {
     (selectedIndex + 1) % items.length;
 
   return (
+    
   <aside
     className="sidebar-container"
     ref={sidebarRef}
   >
-    <div
-      className={`sidebar-nav-list ${direction} ${
-        noTransition ? 'no-transition' : ''
-      }`}
-    >
-      {/* Fixed highlight box */}
-      <div className="selection-box"></div>
+    <div className="mobile-notice">
+      🚧 Mobile Version Coming Soon
+    </div>
+    <div className="sidebar-body">
+      <div
+        className={`sidebar-nav-list ${direction} ${
+          noTransition ? 'no-transition' : ''
+        }`}
+      >
+        {/* Fixed highlight box */}
+        <div className="selection-box"></div>
 
-      <div className="carousel-item top">
-        <span className="icon">
-          {items[getPrevIndex()].icon}
-        </span>
-        <span className="title">
-          {items[getPrevIndex()].title}
-        </span>
-      </div>
+        <div className="carousel-item top">
+          <span className="icon">
+            {items[getPrevIndex()].icon}
+          </span>
+          <span className="title">
+            {items[getPrevIndex()].title}
+          </span>
+        </div>
 
-      <div className="carousel-item center">
-        <span className="icon">
-          {items[selectedIndex].icon}
-        </span>
-        <span className="title">
-          {items[selectedIndex].title}
-        </span>
-      </div>
+        <div className="carousel-item center">
+          <span className="icon">
+            {items[selectedIndex].icon}
+          </span>
+          <span className="title">
+            {items[selectedIndex].title}
+          </span>
+        </div>
 
-      <div className="carousel-item bottom">
-        <span className="icon">
-          {items[getNextIndex()].icon}
-        </span>
-        <span className="title">
-          {items[getNextIndex()].title}
-        </span>
+        <div className="carousel-item bottom">
+          <span className="icon">
+            {items[getNextIndex()].icon}
+          </span>
+          <span className="title">
+            {items[getNextIndex()].title}
+          </span>
+        </div>
       </div>
     </div>
   </aside>
