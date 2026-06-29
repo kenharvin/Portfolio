@@ -33,9 +33,9 @@ export default function AboutSection() {
           </p>
 
           <p className="text-slate-400 leading-8 mb-5">
-            My interests revolve around full stack web development,
+            My interests revolve around web development,
             particularly building responsive interfaces with React while
-            integrating backend technologies like Node.js and PHP.
+            integrating backend technologies like Node.js, Python, and PHP.
           </p>
 
           <p className="text-slate-400 leading-8">
@@ -98,8 +98,32 @@ export default function AboutSection() {
                 </h3>
 
                 <p className="text-slate-400">
-                  Developed Progresstify, a web-based project management
+                  Helped developed Progresstify, a web-based project management
                   application using React and Node.js.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="flex gap-5">
+
+              <div className="flex flex-col items-center">
+
+                <div className="w-4 h-4 rounded-full bg-cyan-400 shadow-glow-sm"></div>
+
+                <div className="w-1 h-20 bg-gradient-to-b from-cyan-400/50 to-transparent mt-2"></div>
+
+              </div>
+
+              <div>
+
+                <h3 className="font-semibold text-white">
+                  2025-2026
+                </h3>
+
+                <p className="text-slate-400">
+                  Developed a mobile application called NaviGO, a multi-modal fare and route estimation system for our group thesis project.
                 </p>
 
               </div>
